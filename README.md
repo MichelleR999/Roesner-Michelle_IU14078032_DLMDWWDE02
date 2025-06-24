@@ -2,15 +2,15 @@
 Roesner-Michelle_IU14078032_DLMDWWDE02_P2
 # Echtzeit-Datenpipeline mit Azure Databricks
 
-## 🔍 Projektübersicht
+## Projektübersicht
 
 In diesem Projekt wurde eine cloudbasierte Streaming-Datenpipeline in Microsoft Azure Databricks umgesetzt. Ziel ist die Simulation, Aggregation und Auswertung von Sensordaten in Echtzeit – inklusive Filterung, Klassifikation und Visualisierung.
 
-## 🎯 Zielsetzung
+## Zielsetzung
 
 Die Anwendung bildet eine modulare Echtzeit-Architektur ab, um kontinuierlich erzeugte Temperaturdaten von simulierten Sensoren zu analysieren. Die Datenpipeline wurde in mehreren, klar abgegrenzten Schritten implementiert.
 
-## ⚙️ Umgesetzte Verarbeitungsschritte
+## ⚙Umgesetzte Verarbeitungsschritte
 
 1. **Datengenerierung**  
    Erzeugung eines kontinuierlichen Datenstroms mit Zeitstempel, Sensor-ID und Temperaturwert.
