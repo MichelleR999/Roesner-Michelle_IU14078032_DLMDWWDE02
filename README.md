@@ -41,7 +41,6 @@ Die Anwendung bildet eine modulare Echtzeit-Architektur ab, um kontinuierlich er
 
 ## Walkthrough-Video
 
-➡️ [Hier klicken, um das Projektvideo anzusehen](#) *(Link bitte hier einfügen)*
 
 ## Architekturdiagramm
 
