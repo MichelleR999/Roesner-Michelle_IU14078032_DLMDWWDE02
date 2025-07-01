@@ -4,11 +4,7 @@ Roesner-Michelle_IU14078032_DLMDWWDE02_P2
 
 ## Projektübersicht
 
-In diesem Projekt wurde eine cloudbasierte Streaming-Datenpipeline in Microsoft Azure Databricks umgesetzt. Ziel ist die Simulation, Aggregation und Auswertung von Sensordaten in Echtzeit – inklusive Filterung, Klassifikation und Visualisierung.
-
-## Zielsetzung
-
-Die Anwendung bildet eine modulare Echtzeit-Architektur ab, um kontinuierlich erzeugte Temperaturdaten von simulierten Sensoren zu analysieren. Die Datenpipeline wurde in mehreren, klar abgegrenzten Schritten implementiert.
+In diesem Projekt wurde eine cloudbasierte Streaming-Datenpipeline in Microsoft Azure Databricks umgesetzt. Ziel ist die Simulation, Aggregation und Auswertung von Sensordaten in Echtzeit inklusive Filterung, Klassifikation und Visualisierung.
 
 ## Umgesetzte Verarbeitungsschritte
 
@@ -26,34 +22,22 @@ Die Anwendung bildet eine modulare Echtzeit-Architektur ab, um kontinuierlich er
 
 5. **Visualisierung**  
    Tabellarische Auswertung (Anzahl, Durchschnitt, Maximaltemperatur je Status)  
-   + Trendanalyse über Temperaturverläufe pro Sensor.
 
 6. **Persistente Speicherung (nicht umgesetzt)**  
    Aufgrund fehlender Schreibrechte in der Azure-Umgebung konnte die Ausgabe in Parquet-Dateien nur konzeptionell vorbereitet werden.
 
+7. **Aggregation für Trend**
+   Der Temperaturverlauf der Senoren werden als Trend-Diagramm abgebildet.
+
 ## Tools & Technologien
 
-- Databricks (Azure)
+- Microsoft Azure Databricks 
 - PySpark / Structured Streaming
 - SQL (Spark)
 - In-Memory-Views
 - GitHub für Versionierung
 
-## Walkthrough-Video
-
-
-## Architekturdiagramm
-
-Das konzeptionelle Architekturdiagramm befindet sich im Ordner `images/`.
-
----
-
-## Ordnerstruktur
-notebooks/ # Exportiertes Databricks-Notebook
-images/ # PNG-Dateien (Architektur, Screenshots)
-video/ # Walkthrough-Video oder Link
-README.md # Dieses Dokument
-
 ## Hinweis
 
-Die Umsetzung erfolgt im Rahmen des Moduls „Data Engineering“ an der IU. Aufgrund von Systemeinschränkungen / fehlender Speicherzugriff in der Cloud-Umgebung wurden Teile der Architektur angepasst.
+Ursprünglich war geplant das Projekt lokal umzusetzten. Aufgrund meiner begrenzten Systemressourcen (nur 4 GB RAM) war das jedoch nicht umsetzbar. Stattdessen habe ich das Projekt in Azure Databricks realisiert. Über meinen Arbeitgeber habe ich einen Databricks-Zugang. Dort war die Umsetzung technisch möglich, allerdings mit Einschränkungen. Schreibrechte auf persistente Speicherorte sind nicht vorhanden und der Zugriff auf externe Containerlösungen sind ebenfalls limitiert.
+Deshalb wurde die Pipeline vollständig innerhaln von Databricks modular aufgebaut. Dabei sind alle Schritte logisch getrennt und inerhalb eines Notebooks über In-Memory-View hinterlegt.
